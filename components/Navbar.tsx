@@ -10,6 +10,7 @@ const Navbar = () => {
   const { user } = useUser();
   const [dropDownMenu, setDropDownMenu] = useState(false);
   const cart = useCart();
+
   return (
     <div className="sticky top-0 z-10 py-2 px-10 flex justify-between items-center bg-white">
       <Link href={"/"}>
