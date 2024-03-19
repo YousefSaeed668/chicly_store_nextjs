@@ -1,6 +1,8 @@
 import { getProducts } from "@/lib/actions/actions";
 import ProductCard from "./ProductCard";
 
+export const dynamic = "force-dynamic";
+
 const ProductList = async () => {
   const products = await getProducts();
 
