@@ -6,7 +6,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-
+import { Mina } from "next/font/google";
+const mina = Mina({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 const Navbar = () => {
   const { user } = useUser();
   const [dropDownMenu, setDropDownMenu] = useState(false);
@@ -17,7 +21,11 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-10 py-2 px-10 gap-2 flex justify-between items-center bg-white max-sm:px-2">
       <Link href={"/"}>
-        <Image src="/logo.png" alt="logo" width={130} height={100} />
+        <h1
+          className={`text-xl min-[500]:text-2xl sm:text-4xl text-blue-500 font-bold tracking-widest mx-auto ${mina.className}`}
+        >
+          Chicly
+        </h1>
       </Link>
       <div className="flex gap-4 text-base-bold max-lg:hidden">
         <Link
